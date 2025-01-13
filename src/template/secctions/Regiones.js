@@ -25,6 +25,10 @@ const Regiones = () => {
          const handleClick = () => {
             const regionName = region.id.replace('_', ' ');
             parrafo.textContent = `Seleccionaste la región: ${regionName}`;
+           // if(regionName === 'pochutlaId'){
+               //alert('Este es pochutla')
+
+           // }
             //alert(`Seleccionaste la región: ${regionName}`);
          };
 
