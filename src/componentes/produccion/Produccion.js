@@ -24,6 +24,18 @@ const Produccion = () => {
     }, []);
 
 
+    // Función para manejar la eliminación
+    const eliminarProducto = async (id) => {
+        console.log(id)
+        try {
+            await axios.delete(`http://localhost:5000/prod/producciones/${id}`); // Llamada al backend
+            setProduccion(produccion.filter(producto => producto._id !== id)); // Actualizar el estado local
+        } catch (error) {
+            console.error('Error al eliminar producto:', error);
+        }
+    };
+
+
     return (
         <div>
 
@@ -61,11 +73,14 @@ const Produccion = () => {
                                     <div key={producto._id} className="card">
                                         <h3 >{producto.tipo}</h3>
                                         <hr className='thin-gray'/>
+                                        <label>Título:</label>
                                         <p>{producto.nombre}</p>
                                         <hr className='thin-gray'/>
+                                        <label>Resúmen:</label>
                                         <p>{producto.resumen}</p>
                                         <hr className='thin-gray'/>
                                         <p><strong>Autor:</strong> {producto.autor}</p>
+                                        <button type="submit" class="btn" onClick={() => eliminarProducto(producto._id)}>Eliminar</button>
                                     </div>
                                 ))}
                             </div>

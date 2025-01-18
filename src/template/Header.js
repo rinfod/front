@@ -40,16 +40,6 @@ function Header() {
                                     <li>
                                         <Link class="navbar-brand" aria-current="page" to="/produccion">Producción Científica</Link>
                                     </li>
-                                    
-                                    <li>
-                                        <a href="javascript:;" id="menu-company" class="drop-down" title="Company">
-                                            Perspectivas
-                                            <span class="open arrow arrow-up"></span>
-                                            <span class="closed arrow arrow-down"></span>
-                                        </a>
-                                    </li>
-                                    <li><a title="Login" href="#">Recursos</a></li>
-
                                 </ul>
                             </div>
 
