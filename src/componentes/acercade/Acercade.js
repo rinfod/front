@@ -1,4 +1,6 @@
 
+import './acercade.css'
+
 
 
 function Acercade() {
@@ -9,7 +11,7 @@ function Acercade() {
                     <div class="row">
                         <div class="col col-lg-12 col-sm-12">
                             <h2 className="fw500 tertiary-color no-margin" >Introducción</h2>
-                            <p class="fs-mid">
+                            <p class="fs-mid elemento interlineado">
                                 <strong>
                                     El Observatorio en Seguridad Alimentaria y Nutricional de Oaxaca (OBSANO) es una plataforma digital innovadora que integra tecnologías avanzadas y análisis de datos para monitorear y visibilizar la situación de la seguridad alimentaria en el estado. Este esfuerzo responde a los persistentes desafíos en el acceso y disponibilidad de alimentos en comunidades vulnerables, especialmente en zonas rurales y marginadas. Con un enfoque basado en evidencia científica, OBSANO se posiciona como una herramienta clave para fortalecer la toma de decisiones de autoridades, académicos y actores sociales.
                                     Además de recopilar y procesar datos, el Observatorio fomenta la transparencia y la participación social al emplear tecnologías como sistemas de información geográfica (SIG) y análisis estadísticos avanzados. Este modelo, vinculado al marco del Gobierno Electrónico, busca transformar la administración pública mediante la innovación tecnológica, facilitando el acceso a información clave para promover políticas alimentarias sostenibles y garantizar el derecho a la alimentación adecuada.
@@ -28,7 +30,7 @@ function Acercade() {
 
                         <div class="col col-lg-12 col-sm-12">
                             <h2 className="fw500 white-color no-margin" >Antecedentes</h2>
-                            <p class="fs-mid">
+                            <p class="fs-mid elemento interlineado">
                                 <strong>
                                     La seguridad alimentaria en Oaxaca enfrenta múltiples retos debido a factores estructurales como la pobreza, la desigualdad y la vulnerabilidad climática, que afectan de manera desproporcionada a comunidades rurales e indígenas. Diversos estudios han señalado la importancia de contar con sistemas de monitoreo y evaluación efectivos para diseñar políticas públicas basadas en evidencia. En este contexto, el Observatorio en Seguridad Alimentaria y Nutricional de Oaxaca (OBSANO) surge como una iniciativa estratégica que combina innovación tecnológica y análisis de datos para contribuir a la resolución de esta problemática y fortalecer la gestión pública en el marco del Gobierno Electrónico.
                                 </strong>
@@ -43,7 +45,7 @@ function Acercade() {
                     <div class="row">
                         <div class="col col-lg-12 col-sm-12">
                             <h2 className="fw500 tertiary-color no-margin" >Justificación</h2>
-                            <p class="fs-mid">
+                            <p class="fs-mid elemento interlineado">
                                 <strong>
                                     La limitada disponibilidad de datos confiables y accesibles sobre la seguridad alimentaria dificulta la formulación de políticas públicas efectivas en Oaxaca. OBSANO responde a esta necesidad al proporcionar un espacio digital que integra tecnologías avanzadas para:
                                     <ul>
@@ -75,7 +77,7 @@ function Acercade() {
 
                         <div class="col col-lg-12 col-sm-12">
                             <h2 className="fw500 white-color no-margin" >Misión</h2>
-                            <p class="fs-mid">
+                            <p class="fs-mid elemento interlineado">
                                 <strong>
                                     Contribuir a la mejora de la seguridad alimentaria en Oaxaca mediante el análisis y visualización de datos clave, integrando herramientas de Gobierno Electrónico para garantizar la transparencia, la accesibilidad y la efectividad en la toma de decisiones públicas.
                                 </strong>
@@ -92,7 +94,7 @@ function Acercade() {
                     <div class="row">
                         <div class="col col-lg-12 col-sm-12">
                             <h2 className="fw500 tertiary-color no-margin" >Visión</h2>
-                            <p class="fs-mid">
+                            <p class="fs-mid elemento interlineado">
                                 <strong>
                                     Convertirse en una plataforma líder a nivel regional en el análisis de datos sobre seguridad alimentaria y nutricional, destacando como un modelo de referencia en el uso de tecnologías avanzadas para la innovación gubernamental y el desarrollo sostenible, con un enfoque en la equidad y el derecho a la alimentación adecuada.
                                 </strong>
@@ -114,7 +116,7 @@ function Acercade() {
                             </div>
                             <h3 class="tertiary-color">Edú Ortega Ibarra</h3>
 
-                            <p>Nutriólogo Posgraduado con enfoque en Seguridad Alimentaria y Nutricional, Doctorando en Gobierno Electrónico. Ha participado en investigaciones interinstitucionales en instituciones de prestigio y cuenta con amplia experiencia en la dirección de tesis y publicaciones científicas.</p>
+                            <p className=" elemento interlineado">Nutriólogo Posgraduado con enfoque en Seguridad Alimentaria y Nutricional, Doctorando en Gobierno Electrónico. Ha participado en investigaciones interinstitucionales en instituciones de prestigio y cuenta con amplia experiencia en la dirección de tesis y publicaciones científicas.</p>
 
                         </div>
                         <div class="col col-lg-3 col-sm-12">
@@ -122,7 +124,7 @@ function Acercade() {
                                 <img width="200" loading="lazy" data-src="/static_content/vpsserver_com_frontend/img/rapid-fast.svg" alt="Fast processing power deployment for our VPS Hosting plans" src="img/mujer2.png" />
                             </div>
                             <h3 class="tertiary-color">Norma Martínez</h3>
-                            <p>Especialista en Diseño Gráfico y Mercadotecnia, con una Maestría y Doctorado en Gobierno Electrónico. Su trabajo se enfoca en gobernanza digital y gobierno abierto, con participación en congresos nacionales e internacionales.</p>
+                            <p className=" elemento interlineado">Especialista en Diseño Gráfico y Mercadotecnia, con una Maestría y Doctorado en Gobierno Electrónico. Su trabajo se enfoca en gobernanza digital y gobierno abierto, con participación en congresos nacionales e internacionales.</p>
 
                         </div>
 
@@ -131,14 +133,14 @@ function Acercade() {
                                 <img width="200" loading="lazy" data-src="/static_content/vpsserver_com_frontend/img/secure-hosting.svg" alt="Affordable plans" src="img/mujer.png" />
                             </div>
                             <h3 class="tertiary-color">Galdina Fortis Saldaña</h3>
-                            <p>Ingeniera en Computación con estudios avanzados en antropología y tecnologías inteligentes. Actualmente, cursa un Doctorado en Gobierno Electrónico con un enfoque en procesos de información y gestión pública.</p>
+                            <p className=" elemento interlineado">Ingeniera en Computación con estudios avanzados en antropología y tecnologías inteligentes. Actualmente, cursa un Doctorado en Gobierno Electrónico con un enfoque en procesos de información y gestión pública.</p>
                         </div>
                         <div class="col col-lg-3 col-sm-12">
                             <div class="img-container">
                                 <img width="200" loading="lazy" data-src="/static_content/vpsserver_com_frontend/img/fast-support.svg" alt="Quick customer support" src="img/hombre.png" />
                             </div>
                             <h3 class="tertiary-color">Rolando Pedro Gabriel</h3>
-                            <p>Experto en Tecnologías de la Información y Comunicación, con experiencia en proyectos de modernización administrativa y análisis de datos para el desarrollo regional.</p>
+                            <p className=" elemento interlineado">Experto en Tecnologías de la Información y Comunicación, con experiencia en proyectos de modernización administrativa y análisis de datos para el desarrollo regional.</p>
 
                         </div>
                     </div>
@@ -153,7 +155,7 @@ function Acercade() {
                     <div class="row">
                         <div class="col col-lg-12 col-sm-12">
                             <h2 className="fw500 tertiary-color no-margin" >Líneas de investigación</h2>
-                            <p class="fs-mid">
+                            <p class="fs-mid elemento interlineado">
                                 <strong>
 
                                     <ol>
@@ -180,7 +182,7 @@ function Acercade() {
 
                         <div class="col col-lg-12 col-sm-12">
                             <h2 className="fw500 white-color no-margin" >Objetivo</h2>
-                            <p class="fs-mid">
+                            <p class="fs-mid elemento interlineado">
                                 <strong>
                                     Desarrollar y consolidar una plataforma digital que facilite el acceso a datos confiables y análisis integrales sobre seguridad alimentaria en Oaxaca, promoviendo la transparencia, la innovación tecnológica y el uso de herramientas de Gobierno Electrónico para empoderar a los tomadores de decisiones, investigadores y ciudadanos.
                                 </strong>
