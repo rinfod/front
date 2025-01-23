@@ -1,0 +1,97 @@
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 400px; /* Ajusta el valor según el tamaño deseado */
+    height: auto; /* Permite que se ajuste automáticamente */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin: 0 0 10px;
+}
+
+.card-content p {
+    font-size: 1em;
+    color: #7f8c8d;
+    margin: 0 0 10px;
+}
+
+.card-content .btn-del {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #943f3f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+
+.card-content .btn-del:hover {
+    background-color: #ee0909;
+}
+
+.card-content .btn-p {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #2980b9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+
+.card-content .btn-p:hover {
+    background-color: #3498db;
+}
+
+.card-content .btn-p {
+    margin-right: 10px; /* Espacio entre los botones */
+}
+
+.card-content .btn-del {
+    margin-right: 10px; /* Espacio entre los botones */
+}
+
+
+.toggle-prod {
+    font-size: 2rem; /* Tamaño del texto */
+    font-weight: 500; /* Grosor intermedio */
+    color: #34495e; /* Un gris azulado sobrio y profesional */
+    margin: 0; /* Asegura que no haya margen adicional */
+    text-transform: capitalize; /* Primera letra en mayúscula */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
+    border-bottom: 3px solid #1abc9c; /* Verde menta elegante */
+    padding-bottom: 5px; /* Espacio entre el texto y la línea */
+    font-family: 'Roboto', sans-serif; /* Fuente profesional y moderna */
+    text-align: center; /* Centrar el texto */
+    background: linear-gradient(90deg, #ecf0f1 10%, transparent 90%); /* Fondo sutil */
+}

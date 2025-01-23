@@ -1,4 +1,4 @@
-
+import '../acercade/acercade.css'
 function Oaxacasan() {
     return (
         <div>
@@ -7,7 +7,7 @@ function Oaxacasan() {
                     <div class="row">
                         <div class="col col-lg-12 col-sm-12">
                             <h2 className="fw500 tertiary-color no-margin" >Contexto</h2>
-                            <p class="fs-mid">
+                            <p class="fs-mid elemento interlineado">
                                 <strong>
                                     Oaxaca, reconocido como uno de los estados con mayor diversidad cultural y geográfica de México, está dividido en <b>ocho regiones</b>: Valles Centrales, Sierra Norte, Sierra Sur, Mixteca, Costa, Cañada, Papaloapan e Istmo de Tehuantepec. Estas regiones reflejan una amplia gama de condiciones socioeconómicas y ambientales, que inciden directamente en la Seguridad Alimentaria y Nutricional (SAN).
                                     El estado enfrenta altos índices de pobreza y marginación, particularmente en comunidades rurales e indígenas, donde el acceso a alimentos suficientes, inocuos y nutritivos es limitado. Estas características hacen de Oaxaca un caso de estudio emblemático para entender las complejas relaciones entre desarrollo social, recursos naturales y políticas públicas enfocadas en la SAN.
@@ -26,7 +26,7 @@ function Oaxacasan() {
 
                         <div class="col col-lg-12 col-sm-12">
                             <h2 className="fw500 white-color no-margin" >Conceptos</h2>
-                            <p class="fs-mid">
+                            <p class="fs-mid elemento interlineado">
                                 <strong>
                                     <p><b>Seguridad Alimentaria y Nutricional (SAN):</b>
                                     La SAN se define como el estado en el que todas las personas tienen acceso físico, social y económico a alimentos suficientes, inocuos y nutritivos que satisfagan sus necesidades dietéticas para llevar una vida activa y saludable. Este concepto integra aspectos de disponibilidad, acceso, utilización y estabilidad de los alimentos.</p>
@@ -45,7 +45,7 @@ function Oaxacasan() {
                     <div class="row">
                         <div class="col col-lg-12 col-sm-12">
                             <h2 className="fw500 tertiary-color no-margin" >Dimensiones</h2>
-                            <p class="fs-mid">
+                            <p class="fs-mid elemento interlineado">
                                 <strong>
                                     La SAN se compone de las siguientes dimensiones:
                                     <ol>
@@ -71,7 +71,7 @@ function Oaxacasan() {
 
                         <div class="col col-lg-12 col-sm-12">
                             <h2 className="fw500 white-color no-margin" >Normatividad</h2>
-                            <p class="fs-mid">
+                            <p class="fs-mid elemento interlineado">
                                 <strong>
                                     En México, la SAN está respaldada por un marco jurídico que promueve el derecho a la alimentación adecuada y establece la base legal para políticas públicas y programas. Entre las principales disposiciones se encuentran:
                                     <ul>

@@ -1,6 +1,6 @@
 
 //import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Inicio from '../componentes/Inicio/Inicio';
 import Banner from './Banner';
 import Acercade from '../componentes/acercade/Acercade';
@@ -8,8 +8,11 @@ import Oaxacasan from '../componentes/oaxacasan/Oaxacasan';
 import Produccion from '../componentes/produccion/Produccion';
 
 function Header() {
+    // Custom hook para verificar la ruta actual
+    const location = useLocation();
+
     return (
-        <Router>
+        <div>
             <header class="content">
                 <div class="header header-bg">
                     <div class="container">
@@ -46,8 +49,8 @@ function Header() {
                         </nav>
 
 
-                        <Banner />
-
+                        {/* Mostrar Banner solo en la página de inicio */}
+                        {location.pathname === "/" && <Banner />}
 
 
                     </div>
@@ -60,7 +63,7 @@ function Header() {
                 <Route path="/oaxacasan" element={<Oaxacasan />} />
                 <Route path="/produccion" element={<Produccion />} />
             </Routes>
-        </Router>
+        </div>
     );
 }
 

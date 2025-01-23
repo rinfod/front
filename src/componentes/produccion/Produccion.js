@@ -4,23 +4,30 @@ import FormProd from "./FormProd";
 
 
 import './producto.css'; // Archivo CSS para estilos
+import './cardProd.css';
 
 const Produccion = () => {
     const [produccion, setProduccion] = useState([]);
+    const [isAccordionOpenArticulo, setAccordionOpenArticulo] = useState(false);
+    const [isAccordionOpenLibro, setAccordionOpenLibro] = useState(false);
+    const [isAccordionOpenCapitulo, setAccordionOpenCapitulo] = useState(false);
+    const [isAccordionOpenPresentacion, setAccordionOpenPresentacion] = useState(false);
+    const [isAccordionOpenPoster, setAccordionOpenPoster] = useState(false);
+    const [isAccordionOpenTesis, setAccordionOpenTesis] = useState(false);
 
     // Obtener los productos desde el servidor
-  const fetchProductos = async () => {
-    axios.get('http://localhost:5000/prod/produccion')
+    const fetchProductos = async () => {
+        axios.get('http://localhost:5000/prod/produccion')
             .then(response => {
                 setProduccion(response.data);
             })
             .catch(error => {
                 console.error('Error al obtener los productos:', error);
             });
-  };
+    };
 
     useEffect(() => {
-       fetchProductos();
+        fetchProductos();
     }, []);
 
 
@@ -36,168 +43,292 @@ const Produccion = () => {
     };
 
 
+    // Función para manejar la apertura/cierre del acordeón
+    const toggleAccordionArticulo = () => {
+        setAccordionOpenArticulo(!isAccordionOpenArticulo);
+    };
+
+    // Función para manejar la apertura/cierre del acordeón
+    const toggleAccordionLibro = () => {
+        setAccordionOpenLibro(!isAccordionOpenLibro);
+    };
+
+    // Función para manejar la apertura/cierre del acordeón
+    const toggleAccordionCapitulo = () => {
+        setAccordionOpenCapitulo(!isAccordionOpenCapitulo);
+    };
+
+    // Función para manejar la apertura/cierre del acordeón
+    const toggleAccordionPresentacion = () => {
+        setAccordionOpenPresentacion(!isAccordionOpenPresentacion);
+    };
+
+    // Función para manejar la apertura/cierre del acordeón
+    const toggleAccordionPoster = () => {
+        setAccordionOpenPoster(!isAccordionOpenPoster);
+    };
+
+    // Función para manejar la apertura/cierre del acordeón
+    const toggleAccordionTesis = () => {
+        setAccordionOpenTesis(!isAccordionOpenTesis);
+    };
+
+
+
     return (
         <div>
 
-            <div class="content padding-y-big tertiary-bg-mapa">
-                <div class="container padding-y-big">
-                    <div class="row">
-
-                        <div class="col col-lg-12 col-sm-12">
+            <div className="content padding-y-big tertiary-bg-mapa">
+                <div className="container padding-y-big">
+                    <div className="row">
+                        <div className="col col-lg-12 col-sm-12">
                             <FormProd onProductoActualizado={fetchProductos} />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="ccontent sub-footer header-bg md-hide">
-                <div class="container padding-y">
-
-                    <div class="row">
-                        <div class="col col-lg-12 col-sm-12 text-col">
-                            ¡Productos <span class="secondary-color"></span> Científicos!
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="content padding-y-big tertiary-bg-mapa">
-                <div class="container padding-y-big">
-                    <div class="row">
-                        <div class="col col-lg-12 col-sm-12">
 
 
-                            <div className="productos-container">
-                                {produccion.map(producto => (
-                                    <div key={producto._id} className="card">
-                                        <h3 >{producto.tipo}</h3>
-                                        <hr className='thin-gray'/>
-                                        <label>Título:</label>
-                                        <p>{producto.nombre}</p>
-                                        <hr className='thin-gray'/>
-                                        <label>Resúmen:</label>
-                                        <p>{producto.resumen}</p>
-                                        <hr className='thin-gray'/>
-                                        <p><strong>Autor:</strong> {producto.autor}</p>
-                                        <button type="submit" class="btn" onClick={() => eliminarProducto(producto._id)}>Eliminar</button>
+            <div className="content">
+                <div onClick={toggleAccordionArticulo} >
+                    <h2 className="fw500 tertiary-color no-margin toggle-prod">Artículos</h2>
+                    {isAccordionOpenArticulo && ( // Renderiza las tarjetas solo si el acordeón está abierto
+                        <div className="productos-container">
+                            {produccion
+                                .filter((producto) => producto.tipo === "Artículo") // Filtra solo los artículos
+                                .map((producto, index) => (
+                                    <div key={producto._id}>
+                                        <div class="cards-container">
+                                            <div class="card">
+                                                <div class="card-content">
+                                                    <h3>{producto.nombre}</h3>
+                                                    <hr className="thin-gray" />
+                                                    <p>{producto.resumen}</p>
+                                                    <hr className="thin-gray" />
+                                                    <p>
+                                                        <strong>Autor:</strong> {producto.autor}
+                                                    </p>
+                                                    <a href="#"
+                                                        className="btn-del"
+                                                        onClick={() => eliminarProducto(producto._id)}
+                                                    >Eliminar</a>
+
+                                                    <a href="#"
+                                                        className="btn-p"
+                                                        onClick={() => eliminarProducto(producto._id)}
+                                                    >Leer</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 ))}
+                        </div>
+                    )}
+                </div>
+            </div>
+
+
+
+            <div className="content tertiary-bg-mapa">
+                <div className="content">
+                    <div onClick={toggleAccordionLibro} >
+                        <h2 className="fw500 tertiary-color no-margin toggle-prod">Libros</h2>
+                        {isAccordionOpenLibro && ( // Renderiza las tarjetas solo si el acordeón está abierto
+                            <div className="productos-container">
+                                {produccion
+                                    .filter((producto) => producto.tipo === "Libro") // Filtra solo los artículos
+                                    .map((producto, index) => (
+                                        <div key={producto._id}>
+                                            <div class="cards-container">
+                                                <div class="card">
+                                                    <div class="card-content">
+                                                        <h3>{producto.nombre}</h3>
+                                                        <hr className="thin-gray" />
+                                                        <p>{producto.resumen}</p>
+                                                        <hr className="thin-gray" />
+                                                        <p>
+                                                            <strong>Autor:</strong> {producto.autor}
+                                                        </p>
+                                                        <a href="#"
+                                                            className="btn-del"
+                                                            onClick={() => eliminarProducto(producto._id)}
+                                                        >Eliminar</a>
+                                                        <a href="#"
+                                                            className="btn-p"
+                                                            onClick={() => eliminarProducto(producto._id)}
+                                                        >Leer</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
                             </div>
-
-
-
-                        </div>
+                        )}
                     </div>
                 </div>
             </div>
 
 
+            <div className="content">
+                <div onClick={toggleAccordionCapitulo} >
+                    <h2 className="fw500 tertiary-color no-margin toggle-prod">Capítulos</h2>
+                    {isAccordionOpenCapitulo && ( // Renderiza las tarjetas solo si el acordeón está abierto
+                        <div className="productos-container">
+                            {produccion
+                                .filter((producto) => producto.tipo === "Capítulo") // Filtra solo los artículos
+                                .map((producto, index) => (
+                                    <div key={producto._id}>
+                                        <div class="cards-container">
+                                            <div class="card">
+                                                <div class="card-content">
+                                                    <h3>{producto.nombre}</h3>
+                                                    <hr className="thin-gray" />
+                                                    <p>{producto.resumen}</p>
+                                                    <hr className="thin-gray" />
+                                                    <p>
+                                                        <strong>Autor:</strong> {producto.autor}
+                                                    </p>
+                                                    <a href="#"
+                                                        className="btn-del"
+                                                        onClick={() => eliminarProducto(producto._id)}
+                                                    >Eliminar</a>
 
+                                                    <a href="#"
+                                                        className="btn-p"
+                                                        onClick={() => eliminarProducto(producto._id)}
+                                                    >Leer</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                        </div>
+                    )}
+                </div>
+            </div>
+
+
+
+            <div className="content tertiary-bg-mapa">
+                <div className="content">
+                    <div onClick={toggleAccordionPresentacion} >
+                        <h2 className="fw500 tertiary-color no-margin toggle-prod">Presentaciones</h2>
+                        {isAccordionOpenPresentacion && ( // Renderiza las tarjetas solo si el acordeón está abierto
+                            <div className="productos-container">
+                                {produccion
+                                    .filter((producto) => producto.tipo === "Presentación") // Filtra solo los artículos
+                                    .map((producto, index) => (
+                                        <div key={producto._id}>
+                                            <div class="cards-container">
+                                                <div class="card">
+                                                    <div class="card-content">
+                                                        <h3>{producto.nombre}</h3>
+                                                        <hr className="thin-gray" />
+                                                        <p>{producto.resumen}</p>
+                                                        <hr className="thin-gray" />
+                                                        <p>
+                                                            <strong>Autor:</strong> {producto.autor}
+                                                        </p>
+                                                        <a href="#"
+                                                            className="btn-del"
+                                                            onClick={() => eliminarProducto(producto._id)}
+                                                        >Eliminar</a>
+                                                        <a href="#"
+                                                            className="btn-p"
+                                                            onClick={() => eliminarProducto(producto._id)}
+                                                        >Leer</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+
+
+            <div className="content">
+                <div onClick={toggleAccordionPoster} >
+                    <h2 className="fw500 tertiary-color no-margin toggle-prod">Posters</h2>
+                    {isAccordionOpenPoster && ( // Renderiza las tarjetas solo si el acordeón está abierto
+                        <div className="productos-container">
+                            {produccion
+                                .filter((producto) => producto.tipo === "Poster") // Filtra solo los artículos
+                                .map((producto, index) => (
+                                    <div key={producto._id}>
+                                        <div class="cards-container">
+                                            <div class="card">
+                                                <div class="card-content">
+                                                    <h3>{producto.nombre}</h3>
+                                                    <hr className="thin-gray" />
+                                                    <p>{producto.resumen}</p>
+                                                    <hr className="thin-gray" />
+                                                    <p>
+                                                        <strong>Autor:</strong> {producto.autor}
+                                                    </p>
+                                                    <a href="#"
+                                                        className="btn-del"
+                                                        onClick={() => eliminarProducto(producto._id)}
+                                                    >Eliminar</a>
+
+                                                    <a href="#"
+                                                        className="btn-p"
+                                                        onClick={() => eliminarProducto(producto._id)}
+                                                    >Leer</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                        </div>
+                    )}
+                </div>
+            </div>
+
+
+
+            <div className="content tertiary-bg-mapa">
+                <div className="content">
+                    <div onClick={toggleAccordionTesis} >
+                        <h2 className="fw500 tertiary-color no-margin toggle-prod">Tesis</h2>
+                        {isAccordionOpenTesis && ( // Renderiza las tarjetas solo si el acordeón está abierto
+                            <div className="productos-container">
+                                {produccion
+                                    .filter((producto) => producto.tipo === "Tesis") // Filtra solo los artículos
+                                    .map((producto, index) => (
+                                        <div key={producto._id}>
+                                            <div class="cards-container">
+                                                <div class="card">
+                                                    <div class="card-content">
+                                                        <h3>{producto.nombre}</h3>
+                                                        <hr className="thin-gray" />
+                                                        <p>{producto.resumen}</p>
+                                                        <hr className="thin-gray" />
+                                                        <p>
+                                                            <strong>Autor:</strong> {producto.autor}
+                                                        </p>
+                                                        <a href="#"
+                                                            className="btn-del"
+                                                            onClick={() => eliminarProducto(producto._id)}
+                                                        >Eliminar</a>
+                                                        <a href="#"
+                                                            className="btn-p"
+                                                            onClick={() => eliminarProducto(producto._id)}
+                                                        >Leer</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
             
-
-            {/*
-            <div class="content">
-                <div class="container padding-y-big">
-                    <div class="row">
-                        <div class="col col-lg-12 col-sm-12">
-                            <h2 className="fw500 tertiary-color no-margin" >Artículos</h2>
-                            <p class="fs-mid">
-                                <strong>
-
-                                </strong>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="content padding-y-big tertiary-bg-mapa">
-                <div class="container padding-y-big">
-                    <div class="row">
-
-                        <div class="col col-lg-12 col-sm-12">
-                            <h2 className="fw500 white-color no-margin" >Libros y Capítulos</h2>
-                            <p class="fs-mid">
-                                <strong>
-
-                                </strong>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content">
-                <div class="container padding-y-big">
-                    <div class="row">
-                        <div class="col col-lg-12 col-sm-12">
-                            <h2 className="fw500 tertiary-color no-margin" >Infografías</h2>
-                            <p class="fs-mid">
-                                <strong>
-
-                                </strong>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="content padding-y-big tertiary-bg-mapa">
-                <div class="container padding-y-big">
-                    <div class="row">
-
-                        <div class="col col-lg-12 col-sm-12">
-                            <h2 className="fw500 white-color no-margin" >Informes</h2>
-                            <p class="fs-mid">
-                                <strong>
-
-                                </strong>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="content">
-                <div class="container padding-y-big">
-                    <div class="row">
-                        <div class="col col-lg-12 col-sm-12">
-                            <h2 className="fw500 tertiary-color no-margin" >Reportes de Caso</h2>
-                            <p class="fs-mid">
-                                <strong>
-
-                                </strong>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="content padding-y-big tertiary-bg-mapa">
-                <div class="container padding-y-big">
-                    <div class="row">
-
-                        <div class="col col-lg-12 col-sm-12">
-                            <h2 className="fw500 white-color no-margin" >Cartogramas</h2>
-                            <p class="fs-mid">
-                                <strong>
-
-                                </strong>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-*/}
 
 
 

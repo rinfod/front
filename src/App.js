@@ -1,6 +1,7 @@
 //import logo from './logo.svg';
 //import './App.css';
 
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import './template.css';
 import Header from './template/Header';
 
@@ -12,11 +13,12 @@ import Footer from './template/Footer';
 
 function App() {
   return (
-    <div>
+    <Router>
+
       <Header/>
       
       <Footer />
-    </div>
+    </Router>
   );
 }
 
