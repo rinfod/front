@@ -6,6 +6,10 @@ import Banner from './Banner';
 import Acercade from '../componentes/acercade/Acercade';
 import Oaxacasan from '../componentes/oaxacasan/Oaxacasan';
 import Produccion from '../componentes/produccion/Produccion';
+import Login from '../componentes/login/Login';
+import Register from '../componentes/login/Register';
+import Dashboard from '../componentes/login/Dashboard';
+
 
 function Header() {
     // Custom hook para verificar la ruta actual
@@ -62,6 +66,10 @@ function Header() {
                 <Route path="/acercade" element={<Acercade />} />
                 <Route path="/oaxacasan" element={<Oaxacasan />} />
                 <Route path="/produccion" element={<Produccion />} />
+
+                <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
             </Routes>
         </div>
     );
