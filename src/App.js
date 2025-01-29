@@ -7,18 +7,20 @@ import Header from './template/Header';
 
 import Content from './template/Content';
 import Footer from './template/Footer';
+import { AuthProvider } from './context/AuthContext';
 //import 'materialize-css/dist/css/materialize.min.css';
 
 
 
 function App() {
   return (
-    <Router>
+    <AuthProvider>
+            <Router>
+                <Header />
 
-      <Header/>
-      
-      <Footer />
-    </Router>
+                <Footer />
+            </Router>
+        </AuthProvider>
   );
 }
 

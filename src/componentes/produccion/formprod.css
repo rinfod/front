@@ -1,0 +1,44 @@
+/* Estilo para el select */
+select {
+    width: 100%; /* Hace que ocupe todo el ancho disponible */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-family: 'Poppins', sans-serif; /* Fuente elegante */
+    color: #333; /* Color del texto */
+    background-color: #f8f8f8; /* Fondo gris claro */
+    border: 2px solid #ddd; /* Borde sutil */
+    border-radius: 5px; /* Bordes redondeados */
+    appearance: none; /* Elimina el estilo predeterminado del navegador */
+    box-sizing: border-box; /* Para asegurarse de que el padding no afecta el tamaño total */
+    transition: all 0.3s ease; /* Transición suave al interactuar */
+  }
+  
+  /* Estilo cuando el select es enfocado */
+  select:focus {
+    border-color: #4CAF50; /* Borde verde al hacer foco */
+    background-color: #fff; /* Fondo blanco al enfocar */
+    box-shadow: 0 0 8px rgba(72, 191, 145, 0.5); /* Sombra suave verde */
+    outline: none; /* Elimina el borde azul predeterminado en el enfoque */
+  }
+  
+  /* Estilo para las opciones dentro del select */
+  option {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #fff; /* Fondo blanco para las opciones */
+    color: #333; /* Color del texto */
+  }
+  
+  /* Hover para las opciones */
+  option:hover {
+    background-color: #f0f0f0; /* Fondo gris suave al pasar el cursor */
+  }
+  
+
+  .txt-titulo {
+    display: true;
+    font-size: 18px;
+    font-family: Poppins, sans-serif;
+    color: #4CAF50;
+    font-weight: bold;
+}

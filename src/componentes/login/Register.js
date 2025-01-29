@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './form.css';
+import UserTabla from './UserTabla';
 
 function Register() {
   const [email, setEmail] = useState('');
@@ -20,6 +21,8 @@ function Register() {
   };
 
   return (
+    <div class="row">
+      <div class="col col-lg-6 col-sm-4 ">
     <div className="form-container">
       <h2>Register</h2>
       <form onSubmit={handleRegister}>
@@ -39,6 +42,11 @@ function Register() {
         />
         <button type="submit">Register</button>
       </form>
+    </div>
+    </div>
+    <div class="col col-lg-6 col-sm-4 ">
+      <UserTabla />
+    </div>
     </div>
   );
 }

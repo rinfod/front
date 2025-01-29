@@ -12,18 +12,16 @@ function Inicio() {
             <div class="content">
                 <div class="container padding-y-big">
                     <div class="row">
-                            {/*
+                            
                         <div class="col col-lg-6 col-sm-12 img-col">
                             <img loading="lazy" height="300" class="p30 md-hide"
                                 data-src="/static_content/vpsserver_com_frontend/img/server-types.svg"
                                 alt="Definition explained"
                                 src="img/foto5.png" />
                         </div>
-                        */}
+                        
 
-<div class="col col-lg-6 col-sm-12 img-col">
-    <Formulario />
-</div>
+
 
 
 

@@ -78,15 +78,7 @@ const Produccion = () => {
     return (
         <div>
 
-            <div className="content padding-y-big tertiary-bg-mapa">
-                <div className="container padding-y-big">
-                    <div className="row">
-                        <div className="col col-lg-12 col-sm-12">
-                            <FormProd onProductoActualizado={fetchProductos} />
-                        </div>
-                    </div>
-                </div>
-            </div>
+     
 
 
 

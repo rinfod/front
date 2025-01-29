@@ -1,0 +1,41 @@
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f4f4f4;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .user-avatar {
+    margin-bottom: 20px;
+  }
+  
+  .user-avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .buttons button {
+    background-color: var(--vps-tertiary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .buttons button:hover {
+    background-color: #1e7d35;
+  }
+  
