@@ -288,3 +288,11 @@
 .shadow-lg {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important
 }
+
+.padding-map {
+  padding-top: 2.5rem; /* Aproximadamente 1 cm de padding arriba */
+  padding-bottom: 2.5rem; /* Aproximadamente 1 cm de padding abajo */
+  padding-left: 5rem; /* Aproximadamente 3 cm de padding a la izquierda */
+  padding-right: 15rem; /* Aproximadamente 3 cm de padding a la derecha */
+}
+

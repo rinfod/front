@@ -1,11 +1,12 @@
 
+
+import Formulario from '../../template/secctions/Formulario-Temp';
+
 import Regiones from '../region/Regiones';
 
-//import Regiones from '../region/Regiones';
 
 
-
-function Inicio() {
+function InicioTemp() {
     return (
         <div>
             <div class="content">
@@ -237,4 +238,4 @@ function Inicio() {
     )
 }
 
-export default Inicio;
+export default InicioTemp;

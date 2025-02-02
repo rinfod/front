@@ -1,0 +1,118 @@
+/* Colores y fondo elegantes */
+.elegant-bg {
+    background: #f4f6f8; /* Fondo suave */
+    padding: 40px 0;
+  }
+  
+  /* Contenedor general */
+  .interface-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #444;
+  }
+  
+  /* Ajustes para la imagen del SVG */
+  .image-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .svg-wrapper {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Contenedor de la información y la gráfica */
+  .info-container {
+    margin-top: 20px;
+  }
+  
+  /* Estilos de la tarjeta */
+  .elegant-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título de la tarjeta */
+  .card-title {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+  
+  /* Grupo de información */
+  .info-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Etiquetas de información */
+  .info-label {
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  /* Textos de información */
+  .info-text {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+    padding: 8px 12px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+  }
+  
+  /* Contenedor de la gráfica */
+  .chart-group {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+
+
+
+  /* Estilos generales */
+/**body {
+    font-family: 'Roboto', sans-serif; /* Usar la fuente Roboto */
+    /*margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;*/
+   /* background-color: #f7f7f7; /* Fondo neutro más suave */
+/*}*/
+
+.info-container {
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra más suave */
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+.label {
+    font-weight: 300; /* Usar peso más delgado */
+    font-size: 1.3em;
+    color: #6a9e6e; /* Verde muy suave y tenue */
+}
+
+.value {
+    font-weight: 100; /* Peso extremadamente ligero para los valores */
+    font-size: 1.1em;
+    color: #999; /* Gris suave para los valores */
+    display: block;
+    margin-top: 5px;
+}

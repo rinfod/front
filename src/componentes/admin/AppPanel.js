@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import './apppanel.css';
 import Panel from './Panel';
 import Register from '../login/Register';
-import Formulario from '../../template/secctions/Formulario';
 import FormProd from '../produccion/FormProd';
-import Grafica from './Grafica';
+import Formulario from '../region/Formulario';
 
 function AppPanel() {
   const [activeTab, setActiveTab] = useState('tab1');

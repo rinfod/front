@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import './acercade.css'
-
+import './cardInv.css'
 
 
 function Acercade() {
@@ -182,37 +182,31 @@ function Acercade() {
                 <div class="container padding-y">
                     <div class="row">
 
-                        <div class="col col-lg-4 col-sm-4">
-                            <div class="cardA shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Objetivo</text></svg>
 
-                                <div class="card-body">
-                                    <p class="card-text">Desarrollar y consolidar una plataforma digital que facilite el acceso a datos confiables y análisis integrales sobre seguridad alimentaria en Oaxaca, promoviendo la transparencia, la innovación tecnológica y el uso de herramientas de Gobierno Electrónico para empoderar a los tomadores de decisiones, investigadores y ciudadanos.</p>
+                        <div class="card-containerAc">
 
-                                </div>
+                            <div class="cardAc">
+                                <h2>Objetivo</h2>
+                                <p>
+                                    Desarrollar y consolidar una plataforma digital que facilite el acceso a datos confiables y análisis integrales sobre seguridad alimentaria en Oaxaca, promoviendo la transparencia, la innovación tecnológica y el uso de herramientas de Gobierno Electrónico para empoderar a los tomadores de decisiones, investigadores y ciudadanos.
+                                </p>
+                            </div>
+
+                            <div class="cardAc">
+                                <h2>Misión</h2>
+                                <p>
+                                    Contribuir a la mejora de la seguridad alimentaria en Oaxaca mediante el análisis y visualización de datos clave, integrando herramientas de Gobierno Electrónico para garantizar la transparencia, la accesibilidad y la efectividad en la toma de decisiones públicas.
+                                </p>
+                            </div>
+
+                            <div class="cardAc">
+                                <h2>Visión</h2>
+                                <p>
+                                    Convertirse en una plataforma líder a nivel regional en el análisis de datos sobre seguridad alimentaria y nutricional, destacando como un modelo de referencia en el uso de tecnologías avanzadas para la innovación gubernamental y el desarrollo sostenible, con un enfoque en la equidad y el derecho a la alimentación adecuada.
+                                </p>
                             </div>
                         </div>
 
-                        <div class="col col-lg-4 col-sm-4">
-                            <div class="cardA shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Misión</text></svg>
-
-                                <div class="card-body">
-                                    <p class="card-text">Contribuir a la mejora de la seguridad alimentaria en Oaxaca mediante el análisis y visualización de datos clave, integrando herramientas de Gobierno Electrónico para garantizar la transparencia, la accesibilidad y la efectividad en la toma de decisiones públicas.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col col-lg-4 col-sm-4">
-                            <div class="cardA shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Visión</text></svg>
-
-                                <div class="card-body">
-                                    <p class="card-text">Convertirse en una plataforma líder a nivel regional en el análisis de datos sobre seguridad alimentaria y nutricional, destacando como un modelo de referencia en el uso de tecnologías avanzadas para la innovación gubernamental y el desarrollo sostenible, con un enfoque en la equidad y el derecho a la alimentación adecuada.</p>
-                                    
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -221,42 +215,57 @@ function Acercade() {
 
 
             <div class="content text-columns ">
-                <div class="container padding-y">
+                <div class="padding-map">
                     <div class="row content">
                         <h2 className="fw500 white-color no-margin" >Colaboradores</h2>
-                        <div class="col col-lg-3 col-sm-12">
-                            <div class="img-container">
-                                <img width="200" alt="SSD storage for features" data-src="/static_content/vpsserver_com_frontend/img/technology.svg" loading="lazy" class=" lazyload" src="img/hombre1.png" />
+
+
+
+
+
+                        <div class="card-containerAc">
+
+                            <div class="cardAc">
+                                <div class="img-container">
+                                    <img width="200" alt="SSD storage for features" data-src="/static_content/vpsserver_com_frontend/img/technology.svg" loading="lazy" class=" lazyload" src="img/hombre1.png" />
+                                </div>
+                                <h3 class="tertiary-color">Edú Ortega Ibarra</h3>
+                                <p>
+                                    Nutriólogo Posgraduado con enfoque en Seguridad Alimentaria y Nutricional, Doctorando en Gobierno Electrónico. Ha participado en investigaciones interinstitucionales en instituciones de prestigio y cuenta con amplia experiencia en la dirección de tesis y publicaciones científicas..
+                                </p>
                             </div>
-                            <h3 class="tertiary-color">Edú Ortega Ibarra</h3>
 
-                            <p className=" elemento interlineado">Nutriólogo Posgraduado con enfoque en Seguridad Alimentaria y Nutricional, Doctorando en Gobierno Electrónico. Ha participado en investigaciones interinstitucionales en instituciones de prestigio y cuenta con amplia experiencia en la dirección de tesis y publicaciones científicas.</p>
-
-                        </div>
-                        <div class="col col-lg-3 col-sm-12">
+                            <div class="cardAc">
                             <div class="img-container">
                                 <img width="200" loading="lazy" data-src="/static_content/vpsserver_com_frontend/img/rapid-fast.svg" alt="Fast processing power deployment for our VPS Hosting plans" src="img/mujer2.png" />
                             </div>
                             <h3 class="tertiary-color">Norma Martínez</h3>
-                            <p className=" elemento interlineado">Especialista en Diseño Gráfico y Mercadotecnia, con una Maestría y Doctorado en Gobierno Electrónico. Su trabajo se enfoca en gobernanza digital y gobierno abierto, con participación en congresos nacionales e internacionales.</p>
+                                <p>
+                                Especialista en Diseño Gráfico y Mercadotecnia, con una Maestría y Doctorado en Gobierno Electrónico. Su trabajo se enfoca en gobernanza digital y gobierno abierto, con participación en congresos nacionales e internacionales.
+                                </p>
+                            </div>
 
-                        </div>
-
-                        <div class="col col-lg-3 col-sm-12">
+                            <div class="cardAc">
                             <div class="img-container">
                                 <img width="200" loading="lazy" data-src="/static_content/vpsserver_com_frontend/img/secure-hosting.svg" alt="Affordable plans" src="img/mujer.png" />
                             </div>
                             <h3 class="tertiary-color">Galdina Fortis Saldaña</h3>
-                            <p className=" elemento interlineado">Ingeniera en Computación con estudios avanzados en antropología y tecnologías inteligentes. Actualmente, cursa un Doctorado en Gobierno Electrónico con un enfoque en procesos de información y gestión pública.</p>
-                        </div>
-                        <div class="col col-lg-3 col-sm-12">
+                                <p>
+                                Ingeniera en Computación con estudios avanzados en antropología y tecnologías inteligentes. Actualmente, cursa un Doctorado en Gobierno Electrónico con un enfoque en procesos de información y gestión pública.
+                                </p>
+                            </div>
+
+                            <div class="cardAc">
                             <div class="img-container">
                                 <img width="200" loading="lazy" data-src="/static_content/vpsserver_com_frontend/img/fast-support.svg" alt="Quick customer support" src="img/hombre.png" />
                             </div>
                             <h3 class="tertiary-color">Rolando Pedro Gabriel</h3>
-                            <p className=" elemento interlineado">Experto en Tecnologías de la Información y Comunicación, con experiencia en proyectos de modernización administrativa y análisis de datos para el desarrollo regional.</p>
-
+                                <p>
+                                Experto en Tecnologías de la Información y Comunicación, con experiencia en proyectos de modernización administrativa y análisis de datos para el desarrollo regional.
+                                </p>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -269,20 +278,33 @@ function Acercade() {
                     <div class="row">
                         <div class="col col-lg-12 col-sm-12">
                             <h2 className="fw500 tertiary-color no-margin" >Líneas de investigación</h2>
-                            <p class="fs-mid elemento interlineado">
-                                <strong>
 
-                                    <ol>
-                                        <li><b>Gobierno Electrónico y Sociedad: Administración, Innovación y Transformación Social</b>
-                                            Estudio del impacto de las tecnologías digitales en la administración pública y su capacidad para promover la innovación en políticas de seguridad alimentaria, fortaleciendo la relación entre gobierno y sociedad.</li>
-                                        <li><b>Sistemas de Información para el Monitoreo de la Seguridad Alimentaria</b>
-                                            Diseño y uso de herramientas tecnológicas, como SIG y plataformas interactivas, para la recopilación, análisis y visualización de datos relacionados con el acceso y disponibilidad de alimentos en Oaxaca.</li>
-                                        <li><b>Evaluación de Políticas Públicas en Seguridad Alimentaria y Nutricional</b>
-                                            Análisis crítico del impacto y efectividad de programas sociales y políticas públicas relacionadas con la seguridad alimentaria, identificando áreas de mejora y proponiendo estrategias basadas en evidencia</li>
-                                    </ol>
 
-                                </strong>
-                            </p>
+
+
+                            <div class="card-containerAc">
+
+                                <div class="cardAc">
+                                    <h2>Gobierno Electrónico y Sociedad: Administración, Innovación y Transformación Social</h2>
+                                    <p>
+                                        Estudio del impacto de las tecnologías digitales en la administración pública y su capacidad para promover la innovación en políticas de seguridad alimentaria, fortaleciendo la relación entre gobierno y sociedad.
+                                    </p>
+                                </div>
+
+                                <div class="cardAc">
+                                    <h2>Sistemas de Información para el Monitoreo de la Seguridad Alimentaria</h2>
+                                    <p>
+                                        Diseño y uso de herramientas tecnológicas, como SIG y plataformas interactivas, para la recopilación, análisis y visualización de datos relacionados con el acceso y disponibilidad de alimentos en Oaxaca.
+                                    </p>
+                                </div>
+
+                                <div class="cardAc">
+                                    <h2>Evaluación de Políticas Públicas en Seguridad Alimentaria y Nutricional</h2>
+                                    <p>
+                                        Análisis crítico del impacto y efectividad de programas sociales y políticas públicas relacionadas con la seguridad alimentaria, identificando áreas de mejora y proponiendo estrategias basadas en evidencia.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

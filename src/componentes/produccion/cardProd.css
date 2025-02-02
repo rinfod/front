@@ -95,3 +95,12 @@
     text-align: center; /* Centrar el texto */
     background: linear-gradient(90deg, #ecf0f1 10%, transparent 90%); /* Fondo sutil */
 }
+
+.txt-titulo {
+    display: true;
+    font-size: 18px;
+    font-family: Poppins, sans-serif;
+    color: #4CAF50;
+    font-weight: bold;
+    text-align: center;
+  }

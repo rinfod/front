@@ -1,0 +1,42 @@
+.card-containerAc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: left;
+    max-width: 1200px;
+}
+
+/* Estilos para cada tarjeta */
+.cardAc {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 320px;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.cardAc:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.cardAc h2 {
+    font-size: 18px;
+    margin-top: 0;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold; /* Poner en negritas */
+    text-align: left; /* Alinear a la izquierda */
+}
+
+.cardAc p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 20px;
+    text-align: left; /* Asegurar alineación a la izquierda */
+}

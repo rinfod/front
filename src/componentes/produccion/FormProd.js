@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import '../../template/secctions/card.css'
 import './formprod.css'
-import Grafica from '../admin/Grafica';
 import ProductosTabla from './ProductosTabla';
+import Grafica from './Grafica';
 
-const FormProd = ({ onProductoActualizado }) => {
-
+const FormProd = () => {
+  const [productos, setProductos] = useState([]);
   const [formData, setFormData] = useState({
     tipo: '',
     nombre: '',
@@ -15,6 +15,18 @@ const FormProd = ({ onProductoActualizado }) => {
     autor: '',
   });
 
+  const actualizarProductos = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/prod/produccion");
+      setProductos(response.data);
+    } catch (error) {
+      console.error("Error al obtener los productos:", error);
+    }
+  };
+
+  useEffect(() => {
+    actualizarProductos(); // Cargar los productos al inicio
+  }, []);
 
 
   const handleChange = (e) => {
@@ -34,8 +46,8 @@ const FormProd = ({ onProductoActualizado }) => {
         resumen: '',
         autor: '',
       })
-      // Notifica al padre que debe actualizar los productos
-      onProductoActualizado();
+      actualizarProductos(); // Actualizar tabla y gráfica
+     
     } catch (error) {
       console.error(error.response?.data || 'An error occurred');
       alert('Error registering user');
@@ -91,11 +103,11 @@ const FormProd = ({ onProductoActualizado }) => {
       <div class="col col-lg-1 col-sm-1">
       </div>
       <div class="col col-lg-7 col-sm-7">
-        <Grafica />
+        <Grafica productos={productos} />
       </div>
 
     </div>
-    <ProductosTabla />
+    <ProductosTabla productos={productos} actualizarProductos={actualizarProductos}  />
     </div>
   );
 };

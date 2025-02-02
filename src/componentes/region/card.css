@@ -1,0 +1,120 @@
+.datos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.datos-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  width: 300px;
+  text-align: center;
+}
+
+.datos-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.datos-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.card-title {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.card-header {
+  background-color: #ffffff13;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Tipografía elegante */
+/*h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 600;
+  line-height: 1.3;
+}*/
+
+hr.thin-gray {
+  border: none; /* Elimina el estilo predeterminado */
+  border-top: 1px solid #d3d3d3; /* Línea delgada y tenue en gris claro */
+  margin: 20px 0; /* Espaciado superior e inferior */
+  width: 100%; /* Se extiende al ancho completo del contenedor */
+  opacity: 0.7; /* Hace la línea más tenue */
+}
+
+.accordion-item {
+margin-bottom: 10px;
+border: 1px solid #ddd;
+border-radius: 5px;
+}
+
+.accordion-header {
+padding: 10px;
+background-color: #f4f4f4;
+cursor: pointer;
+font-weight: bold;
+}
+
+.accordion-body {
+padding: 10px;
+background-color: #fff;
+border-top: 1px solid #ddd;
+}
+
+.accordion-header:hover {
+background-color: #eaeaea;
+}
+
+.card {
+margin: 10px 0;
+}
+
+
+
+.accordion-header.closed {
+background-color: #f5f5f5;
+color: #333;
+}
+
+.accordion-header.open {
+background-color: #007bff;
+color: white;
+}
+
+.accordion-content {
+padding: 10px;
+border: 1px solid #ddd;
+background-color: #f9f9f9;
+}
+
+.padding-map {
+  padding-top: 2.5rem; /* Aproximadamente 1 cm de padding arriba */
+  padding-bottom: 2.5rem; /* Aproximadamente 1 cm de padding abajo */
+  padding-left: 15rem; /* Aproximadamente 3 cm de padding a la izquierda */
+  padding-right: 25rem; /* Aproximadamente 3 cm de padding a la derecha */
+}
+
+.txt-titulo {
+  display: true;
+  font-size: 18px;
+  font-family: Poppins, sans-serif;
+  color: #4CAF50;
+  font-weight: bold;
+  text-align: center;
+}

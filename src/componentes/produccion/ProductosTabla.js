@@ -1,26 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import "./paginacion.css";
+import { AuthContext } from "../../context/AuthContext";
 
-const ProductosTabla = () => {
-  const [produccion, setProduccion] = useState([]);
+const ProductosTabla = ({ productos, actualizarProductos }) => {
+  const { isAuthenticated } = useContext(AuthContext); 
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(5);
+  const itemsPerPage = 5;
 
   useEffect(() => {
-    const fetchProductos = async () => {
-      try {
-        const response = await axios.get("http://localhost:5000/prod/produccion");
-        setProduccion(response.data);
-      } catch (error) {
-        console.error("Error al obtener los productos:", error);
-      }
-    };
-    fetchProductos();
-  }, []);
+    setCurrentPage(1);
+  }, [productos]);
 
-  const filteredItems = produccion.filter(producto =>
+  const filteredItems = productos.filter(producto =>
     producto.nombre.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -34,8 +27,17 @@ const ProductosTabla = () => {
     pageNumbers.push(i);
   }
 
+  const eliminarProducto = async (id) => {
+    try {
+      await axios.delete(`http://localhost:5000/prod/producciones/${id}`);
+      actualizarProductos(); // Llamar para actualizar la lista tras eliminar
+    } catch (error) {
+      console.error("Error al eliminar producto:", error);
+    }
+  };
+
   return (
-    <div className="container">
+    <div className="container tertiary-bg-map">
       <h2 className="txt-titulo">Productos Académicos</h2>
       
       <div className="search-container">
@@ -55,6 +57,8 @@ const ProductosTabla = () => {
             <th>Título</th>
             <th>Resumen</th>
             <th>Autor</th>
+            <th>Leer</th>
+            {isAuthenticated && <th>Eliminar</th>}
           </tr>
         </thead>
         <tbody>
@@ -64,6 +68,12 @@ const ProductosTabla = () => {
               <td>{producto.nombre}</td>
               <td>{producto.resumen}</td>
               <td>{producto.autor}</td>
+              <td><a href="#" className="enlace-elegante">Leer</a></td>
+              {isAuthenticated && (
+                <td>
+                  <a href="#" className="btn-del" onClick={() => eliminarProducto(producto._id)}>Eliminar</a>
+                </td>
+              )}
             </tr>
           ))}
         </tbody>

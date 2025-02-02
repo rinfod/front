@@ -1,58 +1,58 @@
 import React, { useState, useEffect } from "react";
+import './paginacion.css';
 import axios from "axios";
-import './paginacion.css'
 
-const UserTabla = () => {
-  const [produccion, setProduccion] = useState([]); // Almacenar todos los productos
+const UserTabla = ({ users, actualizarUsuarios }) => {
   const [currentPage, setCurrentPage] = useState(1); // Página actual
   const [itemsPerPage] = useState(5); // Cantidad de elementos por página
 
-  // Función para obtener los productos desde el servidor
-  const fetchProductos = async () => {
-    try {
-      const response = await axios.get('http://localhost:5000/api/auth/users');
-      setProduccion(response.data);
-    } catch (error) {
-      console.error('Error al obtener los productos:', error);
-    }
-  };
-
-  // Cargar los productos cuando el componente se monte
-  useEffect(() => {
-    fetchProductos();
-  }, []);
-
-  // Lógica para obtener los productos de la página actual
+  // Lógica para obtener los usuarios de la página actual
   const indexOfLastItem = currentPage * itemsPerPage; // Último índice del item en la página
   const indexOfFirstItem = indexOfLastItem - itemsPerPage; // Primer índice del item en la página
-  const currentItems = produccion.slice(indexOfFirstItem, indexOfLastItem); // Productos para la página actual
+  const currentItems = users.slice(indexOfFirstItem, indexOfLastItem); // Usuarios para la página actual
 
   // Cambiar la página actual
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // Total de páginas necesarias para mostrar todos los productos
+  // Total de páginas necesarias para mostrar todos los usuarios
   const pageNumbers = [];
-  for (let i = 1; i <= Math.ceil(produccion.length / itemsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(users.length / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
+
+  
+
+
+  const eliminarUsuario = async (id) => {
+    try {
+      await axios.delete(`http://localhost:5000/api/auth/user/${id}`);
+      actualizarUsuarios(); // Actualiza la lista de usuarios después de la eliminación, si es necesario
+    } catch (error) {
+      console.error("Error al eliminar producto:", error);
+    }
+  };
 
   return (
     <div>
       <h2 className="txt-titulo">Lista de usuarios</h2>
 
-      {/* Tabla con los productos */}
+      {/* Tabla con los usuarios */}
       <table>
         <thead>
           <tr>
             <th>Email</th>
-            <th>Password</th>
+            <th>Eliminar</th>
           </tr>
         </thead>
         <tbody>
-          {currentItems.map((producto, index) => (
-            <tr key={index}>
-              <td>{producto.email}</td>
-              <td>{producto.password}</td>
+          {currentItems.map((user, index) => (
+            <tr key={user._id}>
+              <td>{user.email}</td>
+              <td>
+                <a href="#" className="btn-del" onClick={() => eliminarUsuario(user._id)}>
+                  Eliminar
+                </a>
+              </td>
             </tr>
           ))}
         </tbody>

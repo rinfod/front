@@ -60,3 +60,26 @@ table td {
     border-radius: 5px;
     background-color: #f1f8e9;
   }
+
+  .enlace-elegante {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.enlace-elegante:hover {
+    color: #1c6ea4;
+    border-bottom: 2px solid #1c6ea4;
+}
+
+.padding-map {
+    padding-top: 2.5rem; /* Aproximadamente 1 cm de padding arriba */
+    padding-bottom: 2.5rem; /* Aproximadamente 1 cm de padding abajo */
+    padding-left: 5rem; /* Aproximadamente 3 cm de padding a la izquierda */
+    padding-right: 15rem; /* Aproximadamente 3 cm de padding a la derecha */
+  }
+  
+
